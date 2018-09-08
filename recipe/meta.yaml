@@ -1,5 +1,4 @@
 {% set version = '1.1.0' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,24 +9,25 @@ package:
 source:
   fn: cellranger_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/cellranger_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/cellranger/cellranger_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/cellranger_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/cellranger/cellranger_{{ version }}.tar.gz
   sha256: 5d38f288c752bbb9cea6ff830b8388bdd65a8571fd82d8d96064586bd588cf99
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-rematch
     - r-tibble
-
   run:
     - r-base
     - r-rematch
@@ -35,7 +35,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('cellranger')"  # [not win]
+    - $R -e "library('cellranger')"           # [not win]
     - "\"%R%\" -e \"library('cellranger')\""  # [win]
 
 about:
@@ -48,3 +48,7 @@ extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
