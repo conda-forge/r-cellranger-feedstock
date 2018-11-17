@@ -14,9 +14,8 @@ Summary: Helper functions to work with spreadsheets and the "A1:D10" style of ce
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-cellranger-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-cellranger-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-cellranger-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-cellranger-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-cellranger-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-cellranger-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-cellranger-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-cellranger-feedstock)
 
 Current release info
 ====================
