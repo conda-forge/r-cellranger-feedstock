@@ -1,11 +1,11 @@
-About r-cellranger
-==================
+About r-cellranger-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-cellranger-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rsheets/cellranger
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-cellranger-feedstock/blob/main/LICENSE.txt)
 
 Summary: Helper functions to work with spreadsheets and the "A1:D10" style of cell range specification.
 
